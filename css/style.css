@@ -12,3 +12,8 @@ section {
 .page-header {
     margin: 0px;
 }
+
+.well {
+    padding: 2%;
+    margin: 2%;
+}

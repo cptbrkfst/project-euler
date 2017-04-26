@@ -24,3 +24,28 @@ function q2Calc() {
     }
     document.getElementById('a2').value = sum;
 }
+
+function q3Calc() {
+    var num = parseInt(document.getElementById('q3').value);
+
+    function isPrime(num) {
+        for (var i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function firstNPrimes(num) { 
+        if (isPrime(num)) {
+            return num;
+        }
+        for (var i = Math.ceil(num / 2); i > 1; i--) {
+            if (((num % i) == 0) && (isPrime(i))) {
+                return i;
+            }
+        }
+    }
+    document.getElementById('a3').value = firstNPrimes(num);
+}
